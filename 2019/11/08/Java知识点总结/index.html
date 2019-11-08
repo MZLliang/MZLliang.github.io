@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java知识点总结 | Lovely</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Java知识点总结第二章 类和对象1.面向对象概念：2.类的创建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java知识点总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="Lovely">
+<meta property="og:description" content="Java知识点总结第二章 类和对象1.面向对象概念：2.类的创建">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-08T02:38:29.211Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Lovely" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="二十四桥明月夜">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Java知识点总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Java知识点总结
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/08/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-11-08T02:10:12.210Z" itemprop="datePublished">2019-11-08</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="Java知识点总结"><a href="#Java知识点总结" class="headerlink" title="Java知识点总结"></a>Java知识点总结</h1><h3 id="第二章-类和对象"><a href="#第二章-类和对象" class="headerlink" title="第二章 类和对象"></a>第二章 类和对象</h3><p>1.面向对象概念：<br>2.类的创建</p>
+<a id="more"></a>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法：public <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125;</span><br><span class="line">File---&gt;<span class="keyword">new</span>---&gt;<span class="class"><span class="keyword">class</span>---&gt;类名</span></span><br></pre></td></tr></table></figure></div>
+<p>3.创建对象</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名=<span class="keyword">new</span> 类名();</span><br><span class="line">对象名.方法名(); 对象名.属性</span><br></pre></td></tr></table></figure></div>
+<p>4.构造方法：方法名和类名相同,没有返回值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">       public 类名()&#123;&#125;<span class="comment">//主要的做用是初始化操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>5.构造方法重载<br>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">	public 类名()&#123;&#125;</span><br><span class="line">		public 类名(<span class="built_in">String</span> name,int age)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>6.构造方法的执行</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 类名();---&gt;执行构造方法</span><br><span class="line"><span class="keyword">super</span>();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure></div>
+<p>7.static静态修饰符</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">静态修饰符可以修饰属性，方法，代码块</span><br><span class="line">类名.属性      类名.方法名</span><br></pre></td></tr></table></figure></div>
+<p>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</p>
+<h3 id="第三章-面向对象三大特征—封装"><a href="#第三章-面向对象三大特征—封装" class="headerlink" title="第三章 面向对象三大特征—封装"></a>第三章 面向对象三大特征—封装</h3><p>1.封装的概念<br>2.封装的步骤<br>        (1)把属性私有化（private）<br>        (2)对这些属性设置get和set方法<br>        (3)调用处理这些方法<br>3.封装的作用：避免一些用一些不合乎常理的操作<br>4.修饰符</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public---&gt;公共的：在一个项目中都可以访问，权限最高</span><br><span class="line">private---&gt;私有的：只能在本类中进行访问，权限最低</span><br><span class="line">protected---&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</span><br><span class="line"><span class="keyword">default</span>---&gt;默认的：同一个包能访问</span><br></pre></td></tr></table></figure></div>
+<h3 id="第四章-面向对象三大特征—继承"><a href="#第四章-面向对象三大特征—继承" class="headerlink" title="第四章 面向对象三大特征—继承"></a>第四章 面向对象三大特征—继承</h3><p>1.继承的概念：父亲儿子，电影《西虹市首富》<br>2.继承的关键字：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extends</span><br></pre></td></tr></table></figure></div>
+<p>3.继承的语法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> 类名  <span class="keyword">extends</span> 父类</span>&#123;&#125;</span><br></pre></td></tr></table></figure></div>
+<p>4.使用，在子类中：<br>        可以直接调用父类的非私有属性和方法<br>         可以用super.方法     super.属性<br>5.父类构造方法调用：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">super</span>();</span><br><span class="line">调用父类的构造方法必须在之类中调用</span><br><span class="line">必须实在之类构造方法的第一行代码</span><br></pre></td></tr></table></figure></div>
+<p>6.重写@Override<br>        必须继承<br>         方法名一致，参数个数，顺序，类型全部一致</p>
+<h3 id="第五章-面向对象三大特征—多态"><a href="#第五章-面向对象三大特征—多态" class="headerlink" title="第五章 面向对象三大特征—多态"></a>第五章 面向对象三大特征—多态</h3><p>1.多态的概念<br>2.多态的必要条件<br>         * 继承<br>         * 重写<br>         * 父类引用指向子类对象（向上转型）<br>3.多态的使用</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Father</span></span>&#123;</span><br><span class="line">	public <span class="keyword">void</span> cooking()&#123;</span><br><span class="line">		System.out.println(<span class="string">"米饭"</span>);</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span></span>&#123;</span><br><span class="line"> 	@Override</span><br><span class="line">  	public <span class="keyword">void</span> cooking()&#123;</span><br><span class="line">  		System.out.println(<span class="string">"熬粥"</span>);</span><br><span class="line">  	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"> 	public <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="built_in">String</span>[] args) &#123;</span><br><span class="line"> 		Father son=<span class="keyword">new</span> Son();</span><br><span class="line"> 		son.cooking();</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>4.向下转型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Son son=(Son)father;</span><br></pre></td></tr></table></figure></div>
+<h3 id="第六章-抽象"><a href="#第六章-抽象" class="headerlink" title="第六章 抽象"></a>第六章 抽象</h3><p>1.抽象的概念<br>2.抽象的关键字</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abstract</span><br><span class="line">可以修饰类，可以修饰方法</span><br></pre></td></tr></table></figure></div>
+<p>3.抽象的用法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象类</span></span><br><span class="line">public abstract <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line"><span class="comment">//抽象方法没有方法体</span></span><br><span class="line">public abstract <span class="keyword">void</span> 方法名();	</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</span></span><br></pre></td></tr></table></figure></div>
+<p>4.final修饰符：最终的<br>         修饰变量，修饰方法，修饰类<br>                (1)当修饰变量时，变量转换成常量，常量的值不能改变<br>             final int a=18;//a=18;不能改变,必须给一个初始值<br>         (2)当修饰方法时，该方法不能被重写<br>         (3)当修饰类时，该类不能被继承</p>
+<h3 id="第七章-接口"><a href="#第七章-接口" class="headerlink" title="第七章 接口"></a>第七章 接口</h3><p>1.接口的概念<br>2.接口的关键字</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">interface</span><br></pre></td></tr></table></figure></div>
+<p>3.接口的语法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123;&#125;</span><br><span class="line">File---&gt;<span class="keyword">new</span>---&gt;interface<span class="comment">//创建接口</span></span><br></pre></td></tr></table></figure></div>
+<p>4.接口的用法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">实现接口的关键字  implements</span><br><span class="line">public interface 接口名&#123;</span><br><span class="line">	<span class="comment">//接口是纯抽象类</span></span><br><span class="line">	<span class="comment">//接口里面的方法都是抽象方法</span></span><br><span class="line">	oid setData();</span><br><span class="line">&#125;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Play</span> <span class="title">implements</span> 接口名</span>&#123;</span><br><span class="line">	@Override</span><br><span class="line">	<span class="keyword">void</span> setData()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"> 	public <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="built_in">String</span>[] args) &#123;</span><br><span class="line">		Play play=<span class="keyword">new</span> Play();</span><br><span class="line"> 		play.setData();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>注意接口可以进行多继承</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br><span class="line">一般用法</span><br><span class="line">public <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">extends</span> 父类 <span class="title">implements</span> 接口，接口</span>&#123;&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="第八章-集合框架"><a href="#第八章-集合框架" class="headerlink" title="第八章 集合框架"></a>第八章 集合框架</h3><p>1.ArrayList<br>         用法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ArrayList list=<span class="keyword">new</span> ArrayList();</span><br><span class="line">	list.add();<span class="comment">//添加数据</span></span><br><span class="line">	list.get();<span class="comment">//获取数据</span></span><br></pre></td></tr></table></figure></div>
+<p>2.Map<br>         用法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Map</span> map=<span class="keyword">new</span> HasMap();</span><br><span class="line">map.put(key,value);<span class="comment">//key不能重复</span></span><br><span class="line">map.get(key);<span class="comment">//获取key对象的value</span></span><br></pre></td></tr></table></figure></div>
+<p>3.泛型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;<span class="built_in">String</span>&gt; list=<span class="keyword">new</span> ArrayList&gt;<span class="xml"><span class="tag">&lt;<span class="name">String</span>&gt;</span>();</span></span><br><span class="line">Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();</span><br><span class="line">ArrayList&lt;Map&lt;String,String&gt;&gt;list=new</span><br><span class="line">ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/08/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">如何在eclipse中修改jsp的编码为UTF-8</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="可看不可点"></img>
+    <h3 class="avatar-name">
+      
+        一路红尘
+      
+    </h3>
+    <p class="avatar-slogan">
+      一枚小可爱的博客。    陌上人如玉，公子世无双。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/08/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">Java知识点总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/">如何在eclipse中修改jsp的编码为UTF-8</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">JAVA面向对象总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/JAVA%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/">JAVA接口总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://MZLliang.github.io/" title target='_blank'
+        >陌上红尘</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Lovely &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

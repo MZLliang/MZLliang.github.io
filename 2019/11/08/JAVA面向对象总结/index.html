@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JAVA面向对象总结 | Lovely</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="JAVA面向对象总结1,什么是类?什么是对象?简单来说,类是抽象出某一类事物的行为和特征,并进行的封装,特征称之为属性,行为称之为方法;对象就是这一类的具体实例,对象拥有这个类的所有属性和方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA面向对象总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="Lovely">
+<meta property="og:description" content="JAVA面向对象总结1,什么是类?什么是对象?简单来说,类是抽象出某一类事物的行为和特征,并进行的封装,特征称之为属性,行为称之为方法;对象就是这一类的具体实例,对象拥有这个类的所有属性和方法">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-05T02:44:04.089Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Lovely" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="二十四桥明月夜">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-JAVA面向对象总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      JAVA面向对象总结
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/08/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-11-08T02:04:21.469Z" itemprop="datePublished">2019-11-08</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="JAVA面向对象总结"><a href="#JAVA面向对象总结" class="headerlink" title="JAVA面向对象总结"></a>JAVA面向对象总结</h1><h3 id="1-什么是类-什么是对象"><a href="#1-什么是类-什么是对象" class="headerlink" title="1,什么是类?什么是对象?"></a>1,什么是类?什么是对象?</h3><p>简单来说,类是抽象出某一类事物的行为和特征,并进行的封装,特征称之为属性,行为称之为方法;<br>对象就是这一类的具体实例,对象拥有这个类的所有属性和方法</p>
+<a id="more"></a>
+<p>举个例子:<br>所有的人是一个类,人所具有的属性:身高和体重…,人具有的方法:吃饭,睡觉..<br>具体到某一个人是一个对象,比如小明就是一个对象,小明有身高,体重,可以吃饭,可以睡觉..</p>
+<p>java编程思想中是这么描述对象的:<br>对象具有状态,行为,和标识.这意味着每一个对象都可以拥有内部数据(它们给出了该对象的状态)和方法(它们产生行为),并且每一个对象都可以与其他对象区分开来,具体来说,就是每一个对象在内存中都有一个唯一的地址.</p>
+<h3 id="2-什么是面向对象-为什么要面向对象"><a href="#2-什么是面向对象-为什么要面向对象" class="headerlink" title="2,什么是面向对象?为什么要面向对象?"></a>2,什么是面向对象?为什么要面向对象?</h3><p>官方话:<br>面向对象（Object Oriented）是一种新兴的程序设计方法，或者是一种新的程序设计规范(paradigm)，其基本思想是使用对象、类、继承、封装、多态等基本概念来进行程序设计。从现实世界中客观存在的事物（即对象）出发来构造软件系统，并且在系统构造中尽可能运用人类的自然思维方式。面向对象是为了解决系统的可维护性，可扩展性，可重用性….<br>我的理解:<br>首先,面向对象是一种设计程序的方式,是一种设计思想.<br>其次,面向对象节省代码,思路清晰,便于扩展.你所创建出的对象就是给你提供服务的.</p>
+<h3 id="3-面向对象的三大特征"><a href="#3-面向对象的三大特征" class="headerlink" title="3,面向对象的三大特征:"></a>3,面向对象的三大特征:</h3><h2 id="一、封装"><a href="#一、封装" class="headerlink" title="一、封装"></a>一、封装</h2><p>　　 封装是实现面向对象程序设计的第一步，封装就是将属性和方法放在一个类中。对外提供服务时尽可能的隐藏对象内部细节，只保留有限的接口和方法;<br>　　封装的意义：<br>　　封装的意义在于保护或者防止代码（数据）被我们无意中破坏。在面向对象程序设计中属性被看作是一个中心的元素并且和使用它的方法结合的很密切，从而保护它不被其它的方法意外的修改。<br>　　可以通过对类的成员设置一定的访问权限，实现类中成员的信息隐藏。<br>    private：类中限定为private的成员，只能被这个类本身访问。如果一个类的构造方法声明为private,则其它类不能生成该类的一个实例。<br>    default：类中不加任何访问权限限定的成员属于缺省的（default）访问状态，可以被这个类本身和同一个包中的类所访问。<br>    protected：类中限定为protected的成员，可以被这个类本身、它的子类（包括同一个包中以及不同包中的子类）和同一个包中的所有其他的类访问。<br>    public：类中限定为public的成员，可以被所有的类访问。 </p>
+<h2 id="二-继承"><a href="#二-继承" class="headerlink" title="二, 继承"></a>二, 继承</h2><p>Java的类可以分为三类：<br>    类：使用class定义，没有抽象方法<br>    抽象类：使用abstract class定义，可以有也可以没有抽象方法<br>    接口：使用inerface定义，只能有抽象方法,(也可以没有),接口里的变量默认使用public static final修饰<br>在这三个类型之间存在如下关系：<br>    类可以extends：类、抽象类（必须实现所有抽象方法），但只能extends一个，可以implements多个接口（必须实现所有接口方法）—&gt;单继承多实现<br>    抽象类可以extends：类，抽象类（可全部、部分、或者完全不实现父类抽象方法），可以implements多个接口（可全部、部分、或者完全不实现接口方法）<br>    一个接口可以继承多个接口<br>继承以后子类可以得到什么：<br>    子类直接拥有父类非private的属性和方法<br>    子类可以添加自己的属性和方法，即对父类进行扩展<br>    子类可以重写父类的方法<br>关于构造方法：<br>    构造方法不能被继承，子类可以通过super()显式调用父类的构造方法<br>    创建子类对象时，编译器会自动调用父类的无参构造方法<br>    如果父类没有定义无参构造方法，子类必须在构造方法的第一行代码使用super()显式调用<br>    类默认拥有无参构造方法，如果定义了其他有参构造方法，则无参构造方法失效，所以父类没有定义无参构造方法，不是指父类没有写无参构造方法。　<br>Java中通过super来实现对父类成员的访问，super用来引用当前对象的父类。super 的使用有三种情况：<br>    访问父类被隐藏的成员变量<br>    调用父类中被重写的方法<br>    调用父类的构造函数<br>继承的意义：<br>    代码重用是一点，最重要的还是向上转型，即父类的引用变量可以指向子类对象，这是Java面向对象最重要特性多态的基础</p>
+<h2 id="三-多态"><a href="#三-多态" class="headerlink" title="三, 多态"></a>三, 多态</h2><p>在了解多态之前，先了解以下几点:<br>什么是相同的方法：<br>    一个方法可以由：修饰符+返回值+方法名+参数+throw的异常+方法体6部分组成<br>    其中只有方法名和参数是唯一性标识，意即只要方法名和参数相同那他们就是相同的方法<br>    所谓参数相同，是指参数的个数，类型，顺序一致，其中任何一项不同都是不同的方法<br>什么是重载：<br>    重载是指一个类里面（包括父类的方法）存在方法名相同，但是参数不一样的方法，参数不同可以是不同的参数个数、类型或顺序<br>    如果仅仅是修饰符、返回值、throw的异常不同，那这是2个相同的方法，编译都通不过，更不要说重载了<br>什么是重写:<br>    子类中存在和父类相同的方法即为重写(有特殊情况,请注意下面重写的规则)，何谓相同方法请牢记前面的描述，方法名和参数相同，包括参数个数、类型、顺序<br>重写的规则：<br>    子类不能覆盖父类private的方法，private对子类不可见，如果子类定义了一个和父类private方法相同的方法，实为新增方法<br>    重写方法的修饰符权限一定要大于或等于被重写方法的修饰符权限(public &gt; protected &gt; default )<br>    重写抛出的异常需与父类相同或是父类异常的子类，或者重写方法干脆不写throws<br>    重写方法的返回值必须与被重写方法一致，否则编译报错<br>    静态方法不能被重写<br>什么是多态?<br>同一操作作用于不同的对象，可以产生不同的执行结果，这就是多态性。<br>Java的多态性体现在两个方面：由方法重载实现的静态多态性（编译时多态）和方法重写实现的动态多态性（运行时多态）。<br>    编译时多态：在编译阶段，具体调用哪个被重载的方法，编译器会根据参数的不同来调用相应的方法。<br>    运行时多态：当父类引用引用指向子类对象时，被引用的对象的类型决定了调用谁的方法，这个被调用的方法必须是在父类中定义过的，也就是说被子类重写的方法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="number">2</span>     public <span class="keyword">void</span> speak() &#123;</span><br><span class="line"><span class="number">3</span>         System.out.println(<span class="string">"我是动物"</span>);</span><br><span class="line"><span class="number">4</span>     &#125;</span><br><span class="line"><span class="number">5</span> &#125;</span><br><span class="line"><span class="number">6</span> </span><br><span class="line"><span class="number">7</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="number">8</span>     public <span class="keyword">void</span> speak() &#123;</span><br><span class="line"><span class="number">9</span>         System.out.println(<span class="string">"汪汪..."</span>);</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span> &#125;</span><br><span class="line"><span class="number">12</span> </span><br><span class="line"><span class="number">13</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="number">14</span>     public <span class="keyword">void</span> speak() &#123;</span><br><span class="line"><span class="number">15</span>         System.out.println(<span class="string">"喵喵..."</span>);</span><br><span class="line"><span class="number">16</span>     &#125;</span><br><span class="line"><span class="number">17</span> &#125;</span><br><span class="line"><span class="number">18</span> </span><br><span class="line"><span class="number">19</span> public <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"><span class="number">20</span>     public <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="built_in">String</span> args[]) &#123;</span><br><span class="line"><span class="number">21</span>         Animal animal = <span class="keyword">new</span> Dog();</span><br><span class="line"><span class="number">22</span>         animal.speak(); <span class="comment">// 汪汪...</span></span><br><span class="line"><span class="number">23</span>         animal = <span class="keyword">new</span> Cat(); </span><br><span class="line"><span class="number">24</span>         animal.speak();<span class="comment">// 喵喵...</span></span><br><span class="line"><span class="number">25</span>    &#125;</span><br><span class="line"><span class="number">26</span> &#125;</span><br></pre></td></tr></table></figure></div>
+<h4 id="稍微复杂一点的案例"><a href="#稍微复杂一点的案例" class="headerlink" title="稍微复杂一点的案例:"></a>稍微复杂一点的案例:</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="number">2</span>     public <span class="keyword">void</span> speak1() &#123;</span><br><span class="line"><span class="number">3</span>         System.out.println(<span class="string">"我是动物.."</span>);</span><br><span class="line"><span class="number">4</span>         speak2();</span><br><span class="line"><span class="number">5</span>     &#125;</span><br><span class="line"><span class="number">6</span>     private <span class="keyword">void</span> speak2() &#123;</span><br><span class="line"><span class="number">7</span>         System.out.println(<span class="string">"我是一只凶猛的动物"</span>);</span><br><span class="line"><span class="number">8</span>     &#125;</span><br><span class="line"><span class="number">9</span> &#125;</span><br><span class="line"><span class="number">10</span> </span><br><span class="line"><span class="number">11</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="number">12</span>     public <span class="keyword">void</span> speak1(<span class="built_in">String</span> name) &#123;</span><br><span class="line"><span class="number">13</span>         System.out.println(<span class="string">"汪汪..."</span>);</span><br><span class="line"><span class="number">14</span>     &#125;</span><br><span class="line"><span class="number">15</span>     public <span class="keyword">void</span> speak2() &#123;</span><br><span class="line"><span class="number">16</span>         System.out.println(<span class="string">"我是一只泰迪"</span>);</span><br><span class="line"><span class="number">17</span>     &#125;</span><br><span class="line"><span class="number">18</span> &#125;</span><br><span class="line"><span class="number">19</span> </span><br><span class="line"><span class="number">20</span> public <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"><span class="number">21</span>     public <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="built_in">String</span> args[]) &#123;</span><br><span class="line"><span class="number">22</span>         Animal animal = <span class="keyword">new</span> Dog();</span><br><span class="line"><span class="number">23</span>         animal.speak1(); </span><br><span class="line"><span class="number">24</span>         <span class="comment">// 我是动物..</span></span><br><span class="line"><span class="number">25</span>         <span class="comment">// 我是一只凶猛的动物</span></span><br><span class="line"><span class="number">26</span>     &#125;</span><br><span class="line"><span class="number">27</span> &#125;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/08/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            如何在eclipse中修改jsp的编码为UTF-8
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/08/JAVA%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">JAVA接口总结</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="可看不可点"></img>
+    <h3 class="avatar-name">
+      
+        一路红尘
+      
+    </h3>
+    <p class="avatar-slogan">
+      一枚小可爱的博客。    陌上人如玉，公子世无双。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/08/Java%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">Java知识点总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/">如何在eclipse中修改jsp的编码为UTF-8</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">JAVA面向对象总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/JAVA%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/">JAVA接口总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://MZLliang.github.io/" title target='_blank'
+        >陌上红尘</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Lovely &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
