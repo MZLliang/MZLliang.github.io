@@ -5,23 +5,27 @@
   
 
   
-  <title>如何在eclipse中修改jsp的编码为UTF-8 | Lovely</title>
+  <title>Tomcat配置教程 | Lovely</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="如何在eclipse中修改jsp的编码为UTF-8一、修改原因在使用eclipse学习jsp时，很多默认的编码都是iso-8859-1，而我们需要使用的是utf-8编码，我们第一个接触改变jsp编码的方式可能都是在需要修改的jsp中修改，如下：">
+  <meta name="description" content="Tomcat配置教程一、环境变量配置鼠标右键点击【计算机】–&amp;gt;选择【属性】-&amp;gt;【高级系统设置】–&amp;gt;【系统变量】">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何在eclipse中修改jsp的编码为UTF-8">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8&#x2F;index.html">
+<meta property="og:title" content="Tomcat配置教程">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;Tomcat%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Lovely">
-<meta property="og:description" content="如何在eclipse中修改jsp的编码为UTF-8一、修改原因在使用eclipse学习jsp时，很多默认的编码都是iso-8859-1，而我们需要使用的是utf-8编码，我们第一个接触改变jsp编码的方式可能都是在需要修改的jsp中修改，如下：">
+<meta property="og:description" content="Tomcat配置教程一、环境变量配置鼠标右键点击【计算机】–&amp;gt;选择【属性】-&amp;gt;【高级系统设置】–&amp;gt;【系统变量】">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20190420105347219.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20190420110606374.png">
-<meta property="og:updated_time" content="2019-11-06T06:51:16.503Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114154520.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114154613.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114154813.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114154920.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114155044.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114155237.png">
+<meta property="og:updated_time" content="2019-11-14T08:07:13.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20190420105347219.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;img&#x2F;20191114154520.png">
   
     <link rel="alternate" href="/atom.xml" title="Lovely" type="application/atom+xml">
   
@@ -58,21 +62,21 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-如何在eclipse中修改jsp的编码为UTF-8" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Tomcat配置教程" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      如何在eclipse中修改jsp的编码为UTF-8
+      Tomcat配置教程
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/11/14/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/" class="article-date">
-  <time datetime="2019-11-14T07:43:23.520Z" itemprop="datePublished">2019-11-14</time>
+    <a href="/2019/11/14/Tomcat%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2019-11-14T07:56:12.551Z" itemprop="datePublished">2019-11-14</time>
 </a>
     
     
@@ -87,15 +91,10 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="如何在eclipse中修改jsp的编码为UTF-8"><a href="#如何在eclipse中修改jsp的编码为UTF-8" class="headerlink" title="如何在eclipse中修改jsp的编码为UTF-8"></a>如何在eclipse中修改jsp的编码为UTF-8</h1><h3 id="一、修改原因"><a href="#一、修改原因" class="headerlink" title="一、修改原因"></a>一、修改原因</h3><p>在使用eclipse学习jsp时，很多默认的编码都是iso-8859-1，而我们需要使用的是utf-8编码，我们第一个接触改变jsp编码的方式可能都是在需要修改的jsp中修改，如下：</p>
+        <h1 id="Tomcat配置教程"><a href="#Tomcat配置教程" class="headerlink" title="Tomcat配置教程"></a>Tomcat配置教程</h1><h3 id="一、环境变量配置"><a href="#一、环境变量配置" class="headerlink" title="一、环境变量配置"></a>一、环境变量配置</h3><p>鼠标右键点击【计算机】–&gt;选择【属性】-&gt;【高级系统设置】–&gt;【系统变量】</p>
 <a id="more"></a>
-<p>将charset与pageEncoding的编码手动改写为UTF-8。<br><img src="/img/20190420105347219.png" alt=""><br>但是随着使用jsp的增多，我们就会发现绝大多数jsp使用的都是UTF-8编码，而如果每次都手动修改的化就会比较麻烦。</p>
-<h3 id="二、修改步骤"><a href="#二、修改步骤" class="headerlink" title="二、修改步骤"></a>二、修改步骤</h3><p>下面就是将eclipse中jsp的文件改为默认UTF-8编码的步骤：</p>
-<p> 第一步、打开eclipse，在菜单栏里找到window –&gt; Preference</p>
-<p>第二步、打开web –&gt; JSP Files</p>
-<p>第三步、点击JSP Files–&gt; 修改Encoding选项为UTF-8</p>
-<p>打开的界面如下：</p>
-<p><img src="/img/20190420110606374.png" alt=""><br>修改完成之后，jsp默认的编码格式就会变为UTF-8了，新建一个jsp的格式就会和上面的界面一样。 </p>
+<p><img src="/img/20191114154520.png" alt=""><br><img src="/img/20191114154613.png" alt=""><br>然后，点击“系统变量”框下的【新建】按钮。<br>（1）新建CATALINA_BASE变量<br>变量名：CATALINA_BASE<br>变量值：D:\apache-tomcat-8.5.43<br>（Tomcat安装位置，即刚刚解压文件夹下bin文件所在位置）<br><img src="/img/20191114154813.png" alt=""><br>（2）新建CATALINA_HOME变量<br>变量名：CATALINA_HOME<br>变量值：D:\apache-tomcat-8.5.43<br>（变量值同上，填Tomcat的安装位置）<br><img src="/img/20191114154920.png" alt=""><br>（3）找到Path变量，点击编辑<br>变量名：Path<br>变量值：;%CATALINA_HOME%\bin<br>（不要删除原有path变量值，直接在最后添加上这一句即可）<br><img src="/img/20191114155044.png" alt=""><br>这样Tomcat就配置好了。打开cmd命令提示符，输入startup后回车，就可以看到Tomcat成功启动了。<br><img src="/img/20191114155237.png" alt=""></p>
+<h3 id="二、验证Tomcat是否配置成功"><a href="#二、验证Tomcat是否配置成功" class="headerlink" title="二、验证Tomcat是否配置成功"></a>二、验证Tomcat是否配置成功</h3><p>在浏览器地址栏输入localhost:8080或127.0.0.1:8080，看是否能打开<br>(注意验证的时候Tomcat必须在启动状态)</p>
 
       
     </div>
@@ -110,20 +109,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/11/14/Tomcat%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            Tomcat配置教程
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/11/14/JS%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">JS总结</div>
+      <a href="/2019/11/14/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">如何在eclipse中修改jsp的编码为UTF-8</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
