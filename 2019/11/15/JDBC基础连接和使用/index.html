@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JDBC基础连接和使用 | Lovely</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="JDBC基础连接和使用JDBC:    Java DataBase Connectivity    java数据库连接 java语言操作数据库JDBC本质:其实就是官方(sun)公司定义的一套操作所有关系型数据库的规则，即接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接口(JDBC)编程，真正的代码是驱动jar包的是实现类。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JDBC基础连接和使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;JDBC%E5%9F%BA%E7%A1%80%E8%BF%9E%E6%8E%A5%E5%92%8C%E4%BD%BF%E7%94%A8&#x2F;index.html">
+<meta property="og:site_name" content="Lovely">
+<meta property="og:description" content="JDBC基础连接和使用JDBC:    Java DataBase Connectivity    java数据库连接 java语言操作数据库JDBC本质:其实就是官方(sun)公司定义的一套操作所有关系型数据库的规则，即接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接口(JDBC)编程，真正的代码是驱动jar包的是实现类。">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-08T02:43:46.583Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Lovely" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="二十四桥明月夜">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-JDBC基础连接和使用" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      JDBC基础连接和使用
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/15/JDBC%E5%9F%BA%E7%A1%80%E8%BF%9E%E6%8E%A5%E5%92%8C%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2019-11-15T03:00:42.481Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="JDBC基础连接和使用"><a href="#JDBC基础连接和使用" class="headerlink" title="JDBC基础连接和使用"></a>JDBC基础连接和使用</h1><p>JDBC:    Java DataBase Connectivity    java数据库连接 java语言操作数据库<br>JDBC本质:其实就是官方(sun)公司定义的一套操作所有关系型数据库的规则，即接口。各个数据库厂商去实现这套接口，提供数据库驱动jar包。我们可以使用这套接口(JDBC)编程，真正的代码是驱动jar包的是实现类。</p>
+<a id="more"></a>
+<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门:"></a>快速入门:</h3><p>步骤:<br>1.导入驱动jar包 mysql-conerctor -java-5.1.37-bin.jar<br>(1)复制mysql-conerctor -java-5.1.37-bin.jar到项目的libs目录下<br>(2)右键-Add As Librar<br>2.注册驱动<br>3.获取数据库连接对象Connection<br>4.定义SQL语句<br>5.执行SQL语句的对象，Statement<br>6.执行SQL,接受返回结果<br>7.处理结果<br>8.释放资源</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">package jdbc.day01.demo01;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br></pre></td></tr></table></figure></div>
+<h3 id="JDBC-使用基础"><a href="#JDBC-使用基础" class="headerlink" title="JDBC 使用基础"></a>JDBC 使用基础</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo01</span> </span>&#123;</span><br><span class="line">public <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="built_in">String</span>[] args) throws Exception &#123;</span><br><span class="line"><span class="comment">//1,导入驱动jar包</span></span><br><span class="line"><span class="comment">//2.注册驱动这个字符串是jar包中的Driver的存放位置</span></span><br><span class="line">Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line"><span class="comment">//3.获取数据库连接对象参数分别为 url  username password</span></span><br><span class="line">Connection conn = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306/db1"</span>, <span class="string">"root"</span>, <span class="string">"root"</span>);</span><br><span class="line">  <span class="comment">//4.定义SQL语句</span></span><br><span class="line"><span class="built_in">String</span> sql=<span class="string">"update account set balance=500 where id = 1"</span>;</span><br><span class="line"> <span class="comment">//5.获取执行SQL的对象，Statement</span></span><br><span class="line">Statement stmt = conn.createStatement();</span><br><span class="line"> <span class="comment">//6.执行sql语句</span></span><br><span class="line">int count = stmt.executeUpdate(sql);</span><br><span class="line"><span class="comment">//7处理结果</span></span><br><span class="line">System.out.println(count);</span><br><span class="line"><span class="comment">//8释放资源</span></span><br><span class="line">stmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/15/JS%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            JS总结
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/15/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">JAVA面向对象总结</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="可看不可点"></img>
+    <h3 class="avatar-name">
+      
+        一路红尘
+      
+    </h3>
+    <p class="avatar-slogan">
+      一枚小可爱的博客。    陌上人如玉，公子世无双。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/">如何在eclipse中修改jsp的编码为UTF-8</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Tomcat%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">Tomcat配置教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/JS%E6%80%BB%E7%BB%93/">JS总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/JDBC%E5%9F%BA%E7%A1%80%E8%BF%9E%E6%8E%A5%E5%92%8C%E4%BD%BF%E7%94%A8/">JDBC基础连接和使用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">JAVA面向对象总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://MZLliang.github.io/" title target='_blank'
+        >陌上红尘</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Lovely &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
