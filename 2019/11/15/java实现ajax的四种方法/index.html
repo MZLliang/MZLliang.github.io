@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>java实现ajax的四种方法 | Lovely</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="java实现ajax的四种方法第一种（最原生的那种，创建XmlHttpRequest对象）：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java实现ajax的四种方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;java%E5%AE%9E%E7%8E%B0ajax%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95&#x2F;index.html">
+<meta property="og:site_name" content="Lovely">
+<meta property="og:description" content="java实现ajax的四种方法第一种（最原生的那种，创建XmlHttpRequest对象）：">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-15T03:17:16.590Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Lovely" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="二十四桥明月夜">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-java实现ajax的四种方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      java实现ajax的四种方法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/15/java%E5%AE%9E%E7%8E%B0ajax%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2019-11-15T03:02:13.809Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="java实现ajax的四种方法"><a href="#java实现ajax的四种方法" class="headerlink" title="java实现ajax的四种方法"></a>java实现ajax的四种方法</h1><h3 id="第一种（最原生的那种，创建XmlHttpRequest对象）："><a href="#第一种（最原生的那种，创建XmlHttpRequest对象）：" class="headerlink" title="第一种（最原生的那种，创建XmlHttpRequest对象）："></a>第一种（最原生的那种，创建XmlHttpRequest对象）：</h3><a id="more"></a>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">		<span class="comment">//创建XmlHttpRequest对象</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">createXmlHttpRequest</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">	  		<span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;<span class="comment">//返回值为true时说明是新版本IE或其他浏览器</span></span><br><span class="line"></span><br><span class="line">	  			<span class="keyword">return</span> <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">	  		&#125;<span class="keyword">else</span>&#123;<span class="comment">//返回值为false时说明是老版本IE浏览器（IE5和IE6）</span></span><br><span class="line"></span><br><span class="line">	  			<span class="keyword">return</span> <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line"></span><br><span class="line">	  		&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">	  	<span class="comment">//Ajax设置回调函数</span></span><br><span class="line"></span><br><span class="line">	  	<span class="function"><span class="keyword">function</span> <span class="title">callBack</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">	  		<span class="keyword">if</span>(XMLHttpRequest.readyState==<span class="number">4</span> &amp;&amp; XMLHttpRequest.status==<span class="number">200</span>)&#123;</span><br><span class="line"></span><br><span class="line">	  			<span class="keyword">var</span> data = XMLHttpRequest.responseText;</span><br><span class="line"></span><br><span class="line">	  			<span class="keyword">if</span>(data == <span class="string">"true"</span>)&#123;</span><br><span class="line"></span><br><span class="line">	  				$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名已被使用"</span>);</span><br><span class="line"></span><br><span class="line">	  			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">	  				$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名可以使用"</span>);</span><br><span class="line"></span><br><span class="line">	  			&#125;</span><br><span class="line"></span><br><span class="line">	  		&#125;</span><br><span class="line"></span><br><span class="line">	  	&#125;</span><br><span class="line"></span><br><span class="line">	  	</span><br><span class="line">	  	<span class="function"><span class="keyword">function</span> <span class="title">validate</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">	  		<span class="keyword">var</span> name = $(<span class="string">"name"</span>).val();</span><br><span class="line"></span><br><span class="line">	  		<span class="keyword">if</span>(name==<span class="literal">null</span> || name==<span class="string">""</span>)&#123;</span><br><span class="line"></span><br><span class="line">	  			$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名不能为空"</span>);</span><br><span class="line"></span><br><span class="line">	  		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//1. 创建XMLHttpRequest</span></span><br><span class="line"></span><br><span class="line">	  			XMLHttpRequest = createXmlHttpRequest();</span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//2. 设置回调函数</span></span><br><span class="line"></span><br><span class="line">	  			XMLHttpRequest.onreadystatechange = callBack;</span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//3. 初始化XMLHttpRequest组件</span></span><br><span class="line">	</span><br><span class="line">	  		<span class="keyword">var</span> url = <span class="string">"userServlet?name="</span>+name;<span class="comment">//服务器端URL地址,name为用户名文本框获取的值</span></span><br><span class="line">	  							XMLHttpRequest.open(<span class="string">"GET"</span>,url,<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//4. 发送请求</span></span><br><span class="line"></span><br><span class="line">	  			XMLHttpRequest.send(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//上边使用的是get，下面使用的是post</span></span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//var url = "userServlet";</span></span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//XMLHttpRequest.open("POST",url,true);</span></span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//XMLHttpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");</span></span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//var data = "name"+name;//需要发送的数据信息,name为用户名文本框获取的值</span></span><br><span class="line"></span><br><span class="line">	  			<span class="comment">//XMLHttpRequest.send(data);</span></span><br><span class="line"></span><br><span class="line">	  		&#125;</span><br><span class="line"></span><br><span class="line">	  	&#125;</span><br><span class="line"></span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>（下面三种方法，是对登录的一种检测，进行局部刷新，输出相对应的提示）<br>表单为：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;form &gt;</span><br><span class="line"> </span><br><span class="line">    	&lt;table&gt;</span><br><span class="line"></span><br><span class="line">    		&lt;tr&gt;</span><br><span class="line"></span><br><span class="line">    			&lt;td&gt;用户名：&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    			&lt;td&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    				&lt;input type="text" name="name" id="name" &gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    			&lt;/</span>td&gt;</span><br><span class="line"></span><br><span class="line">    			&lt;td&gt;</span><br><span class="line"></span><br><span class="line">    				&lt;div id=<span class="string">"nameDiv"</span> style=<span class="string">"display: inline"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">    			&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    		&lt;/</span>tr&gt;</span><br><span class="line"></span><br><span class="line">    	&lt;<span class="regexp">/table&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    &lt;/</span>form&gt;</span><br></pre></td></tr></table></figure></div>
+<h3 id="第二种（get方法）："><a href="#第二种（get方法）：" class="headerlink" title="第二种（get方法）："></a>第二种（get方法）：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line"> 		$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 			$(<span class="string">"#name"</span>).blur(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">var</span> name = $(<span class="keyword">this</span>).val();</span><br><span class="line"></span><br><span class="line"> 				<span class="comment">//var name = this.value;</span></span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">if</span>(name==<span class="literal">null</span> || name==<span class="string">""</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 					$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名不能为空"</span>);</span><br><span class="line"></span><br><span class="line"> 				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 					$.<span class="keyword">get</span>("userServlet","name="+name,callBack);</span><br><span class="line"></span><br><span class="line"> 					//响应成功时的回调函数</span><br><span class="line"></span><br><span class="line"> 					function callBack(data)&#123;</span><br><span class="line"></span><br><span class="line"> 						<span class="keyword">if</span>(data==<span class="string">"true"</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名已被使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名可以使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;</span><br><span class="line"></span><br><span class="line"> 					&#125;</span><br><span class="line"></span><br><span class="line"> 				&#125;</span><br><span class="line"></span><br><span class="line"> 			&#125;);</span><br><span class="line"></span><br><span class="line"> 		&#125;);</span><br><span class="line"></span><br><span class="line"> 	&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="第三种（post方法）："><a href="#第三种（post方法）：" class="headerlink" title="第三种（post方法）："></a>第三种（post方法）：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line"> 		$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 			$(<span class="string">"#name"</span>).blur(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">var</span> name = $(<span class="keyword">this</span>).val();</span><br><span class="line"></span><br><span class="line"> 				<span class="comment">//var name = this.value;</span></span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">if</span>(name==<span class="literal">null</span> || name==<span class="string">""</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 					$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名不能为空"</span>);</span><br><span class="line"></span><br><span class="line"> 				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 					$.post(<span class="string">"userServlet"</span>,<span class="string">"name="</span>+name,callBack);</span><br><span class="line"></span><br><span class="line"> 					<span class="comment">//响应成功时的回调函数</span></span><br><span class="line"></span><br><span class="line"> 					<span class="function"><span class="keyword">function</span> <span class="title">callBack</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 						<span class="keyword">if</span>(data==<span class="string">"true"</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名已被使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名可以使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;</span><br><span class="line"></span><br><span class="line"> 					&#125;</span><br><span class="line"></span><br><span class="line"> 				&#125;</span><br><span class="line"></span><br><span class="line"> 			&#125;);</span><br><span class="line"></span><br><span class="line"> 		&#125;);</span><br><span class="line"></span><br><span class="line"> 	&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="第四种："><a href="#第四种：" class="headerlink" title="第四种："></a>第四种：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line"> 		$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 			$(<span class="string">"#name"</span>).blur(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">var</span> name = $(<span class="keyword">this</span>).val();</span><br><span class="line"></span><br><span class="line"> 				<span class="comment">//var name = this.value;</span></span><br><span class="line"></span><br><span class="line"> 				<span class="keyword">if</span>(name==<span class="literal">null</span> || name==<span class="string">""</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 					$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名不能为空"</span>);</span><br><span class="line"></span><br><span class="line"> 				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 					$.ajax(&#123;</span><br><span class="line"></span><br><span class="line"> 						<span class="string">"url"</span>		:<span class="string">"userServlet"</span>,	<span class="comment">//要提交的URL路径</span></span><br><span class="line"></span><br><span class="line"> 						<span class="string">"type"</span>		:<span class="string">"POST"</span>,		<span class="comment">//发送请求的方式</span></span><br><span class="line"></span><br><span class="line"> 						<span class="string">"data"</span>		:<span class="string">"name="</span>+name,	<span class="comment">//要发送到服务器的数据</span></span><br><span class="line"></span><br><span class="line"> 						<span class="string">"success"</span>	:callBack		<span class="comment">//响应成功后要执行的代码</span></span><br><span class="line"></span><br><span class="line"> 					&#125;);</span><br><span class="line"></span><br><span class="line"> 					<span class="comment">//响应成功时的回调函数</span></span><br><span class="line"></span><br><span class="line"> 					<span class="function"><span class="keyword">function</span> <span class="title">callBack</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"> 						<span class="keyword">if</span>(data==<span class="string">"true"</span>)&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名已被使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line"> 							$(<span class="string">"#nameDiv"</span>).html(<span class="string">"用户名可以使用"</span>);</span><br><span class="line"></span><br><span class="line"> 						&#125;</span><br><span class="line"></span><br><span class="line"> 					&#125;</span><br><span class="line"></span><br><span class="line"> 				&#125;</span><br><span class="line"></span><br><span class="line"> 			&#125;);</span><br><span class="line"></span><br><span class="line"> 		&#125;);</span><br><span class="line"></span><br><span class="line"> 	&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p>————————————————<br>版权声明：本文为CSDN博主「Denial_learn」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/Denial_learn/article/details/102695208" target="_blank" rel="noopener">https://blog.csdn.net/Denial_learn/article/details/102695208</a></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/15/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">如何在eclipse中修改jsp的编码为UTF-8</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="可看不可点"></img>
+    <h3 class="avatar-name">
+      
+        一路红尘
+      
+    </h3>
+    <p class="avatar-slogan">
+      一枚小可爱的博客。    陌上人如玉，公子世无双。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/java%E5%AE%9E%E7%8E%B0ajax%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95/">java实现ajax的四种方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/%E5%A6%82%E4%BD%95%E5%9C%A8eclipse%E4%B8%AD%E4%BF%AE%E6%94%B9jsp%E7%9A%84%E7%BC%96%E7%A0%81%E4%B8%BAUTF-8/">如何在eclipse中修改jsp的编码为UTF-8</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Tomcat%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">Tomcat配置教程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/JS%E6%80%BB%E7%BB%93/">JS总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/JDBC%E5%9F%BA%E7%A1%80%E8%BF%9E%E6%8E%A5%E5%92%8C%E4%BD%BF%E7%94%A8/">JDBC基础连接和使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://MZLliang.github.io/" title target='_blank'
+        >陌上红尘</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Lovely &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
